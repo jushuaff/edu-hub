@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-green: #6ac335;
+    --green: #009049;
+    --black: #24211d;
+}
+
+.t-green { color: var(--light-green); }
+.t-lgreen { color: var(--green); }
+.t-black { color: var(--black); }
+
+body {
+    font-size: 16px;
+
+    h2 { font-weight: 750 !important; }
+}
+
+#header {
+    background-color: rgba(0,0,0,0.7);
+    --bs-gutter-x: 0;
+    width: 100%;
+    transition: 0.5s ease;
+    position: fixed !important;
+    z-index: 100;
+    flex-direction: column;
+
+    .navbar-toggler { background-color: white; }
+
+    .nav-bottom {
+        padding: 5px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        width: 200px;
+        margin-bottom: -10px;
+    }
+
+    a { color: white !important; }
+}
+
+#header.add-drop {
+    box-shadow: 0 11px 17px -12px black;
+    backdrop-filter: blur(4px);
+}
+
+.banner-section {
+    background: url("../images/banner-bg.jpg") no-repeat center top;
+    background-size: 100% auto;
+
+    .container {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .row {
+        width: 100%;
+        display: flex;
+        color: white;
+
+        .banner-text {
+            display: flex;
+            flex-direction: column;
+
+            a {
+                color: white;
+                font-size: 60px;
+            }
+        }
+
+        h1 span {
+            font-size: 100px;
+            font-weight: 750;
+            text-shadow: 1px 1px #eeeeee;
+        }
+
+        #introduction {
+            font-size: 50px;
+            border-top: 4px solid var(--black);
+        }
+    }
+}
+
+#categories-section {
+    padding: 60px 0;
+
+    h1 {
+        font-weight: 800;
+        margin-bottom: 20px;
+
+        span { padding-bottom:5px; }
+
+        span:first-child {
+            color: var(--black) !important;
+            border-bottom: 4px solid var(--green);
+        }
+
+        span:last-child { color: var(--green); }
+    }
+
+    .card {
+        border-radius: 0;
+        border: 0;
+        box-shadow: 0 11px 17px -12px black;
+
+        .image-con {
+            overflow: hidden;
+            height: 200px;
+            position: relative;
+            background-color: var(--black);
+
+            img {
+                width: 100%;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+        }
+
+        .title {
+            padding: 20px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .description {
+            padding: 0 20px 20px 20px;
+            text-align: justify;
+        }
+
+        .card-footer {
+            background-color: white;
+            border-top: 2px solid var(--black);
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+
+            .price { font-weight: 600; }
+
+            .free {
+                color: var(--light-green);
+            }
+        }
+    }
+}
+
+#about {
+    padding: 60px 0;
+    .about { text-align: justify; }
+
+    .container {
+        border-top: 4px solid var(--green);
+        border-bottom: 4px solid var(--green);
+
+        h1 {
+            text-align: center;
+            font-weight: 700;
+            color: var(--black);
+            padding: 30px 0;
+        }
+
+        .vision-mission {
+            margin-top: 16px;
+            p { text-align: justify; }
+            .image-con {
+                padding:15px 0;
+                height: 150px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #vision .image-con img { width: 80px }
+            #mission .image-con img {width: 80px }
+        }
+    }
+}
+
+footer {
+    background: url("../images/footer-bg.jpg") no-repeat center bottom;
+    background-size: 100% auto;
+    color: white;
+
+    #contact {
+        padding: 50px 0;
+        background-color: rgba(0,0,0,0.7);
+
+        button {
+            background-color: green;
+            width: 100%;
+        }
+
+        .contact-con { text-align:right; }
+    }
+
+    .footer-logo {
+        width: 250px;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .banner-section,
+    footer {
+        background-size: auto 100%;
+    }
+}
